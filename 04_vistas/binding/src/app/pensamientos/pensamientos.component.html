@@ -1,0 +1,11 @@
+<p>
+  Dime ideas:
+
+    <input id="input-name2" type="text" [(ngModel)]="aPensamiento">
+    <button id="button_name2" (click)="btnAnadir($event)">Anade</button>
+</p>
+
+<ul>
+  <h2  *ngIf="aPensamientos.length>0" >Lista de pensamientos</h2>
+  <li *ngFor="let pensamiento of aPensamientos">{{pensamiento}}</li>
+</ul>
