@@ -9,3 +9,11 @@
   <h2  *ngIf="aPensamientos.length>0" >Lista de pensamientos</h2>
   <li *ngFor="let pensamiento of aPensamientos">{{pensamiento}}</li>
 </ul>
+
+<div *ngIf="aPensamientos.length>0; then ideasTemplate else vacioTemplate" ></div>
+<ng-template #ideasTemplate>
+  <h2>Lista de pensamientos</h2>
+</ng-template>
+
+<ng-template #vacioTemplate>
+</ng-template>
