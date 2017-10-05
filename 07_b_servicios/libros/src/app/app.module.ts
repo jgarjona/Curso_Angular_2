@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LibrosComponent } from './libros/libros.component';
 import { BuscarService } from './buscar.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BuscarService } from './buscar.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [BuscarService],
   bootstrap: [AppComponent]
